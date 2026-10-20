@@ -1,131 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Our Food Menu | Delicious Bites</title>
-
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background: #fffaf0;
-        }
-
-        header {
-            background: darkred;
-            color: white;
-            padding: 25px;
-        }
-
-        .food-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            padding: 30px;
-        }
-
-        .food-card {
-            background: white;
-            width: 280px;
-            padding: 15px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px #ddd;
-        }
-
-        .food-card img {
-            width: 100%;
-            height: 190px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
-
-        .food-card h3 {
-            color: darkred;
-        }
-
-        .food-card p {
-            line-height: 1.5;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin: 20px;
-            color: darkred;
-        }
-    </style>
+    <meta name="description" content="Explore the Delicious Bites menu: Ghanaian jollof, banku, fried rice and grilled fish. Build your order and send it to us on WhatsApp.">
+    <meta name="theme-color" content="#18352d">
+    <title>Our Menu | Delicious Bites</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-
-    <header>
-        <h1>Delicious Bites</h1>
-        <h2>Our Food Menu</h2>
-        <p>Fresh food. Great taste. Happy moments.</p>
+<body class="menu-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-nav page-width" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Delicious Bites home"><span class="brand-mark" aria-hidden="true">D</span><span>Delicious <em>Bites</em></span></a>
+            <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="menu.html">Our menu</a></li>
+                <li><a href="index.html#story">Our story</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a class="nav-cta" href="index.html#reserve">Book a table <span aria-hidden="true">↗</span></a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="food-container">
+    <main id="main">
+        <section class="menu-hero"><div class="page-width menu-hero-inner"><p class="eyebrow light-eyebrow"><span></span> Straight from our kitchen</p><h1>A table full<br>of <em>good things.</em></h1><p>Honest ingredients, familiar favourites and a little Ghanaian magic in every bite.</p></div></section>
+        <section class="menu-content section-pad">
+            <div class="page-width">
+                <div class="menu-intro"><div><p class="eyebrow"><span></span> The menu</p><h2>Find your <em>favourite.</em></h2></div><p>Pick a dish to add it to your order. When you’re ready, send it to us on WhatsApp and we’ll take it from there.</p></div>
+                <div class="menu-tools">
+                    <div class="filter-list" role="group" aria-label="Filter menu by category">
+                        <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">All dishes</button>
+                        <button class="filter-button" type="button" data-filter="rice" aria-pressed="false">Rice</button>
+                        <button class="filter-button" type="button" data-filter="local" aria-pressed="false">Local favourites</button>
+                        <button class="filter-button" type="button" data-filter="grill" aria-pressed="false">From the grill</button>
+                    </div>
+                    <label class="search-box"><span class="visually-hidden">Search dishes</span><span aria-hidden="true">⌕</span><input type="search" id="menuSearch" placeholder="Find a dish..." autocomplete="off"></label>
+                </div>
+                <p class="results-count" id="resultsCount" aria-live="polite"></p>
+                <p class="backend-notice" id="menuBackendNotice" role="status" hidden></p>
+                <div class="menu-grid" id="menuGrid">
+                    <article class="menu-card" data-name="Ghanaian Jollof Rice" data-category="rice" data-price="35">
+                        <div class="menu-card-photo"><img src="foodimg/jollof.jpg" alt="Ghanaian jollof rice, freshly prepared" loading="lazy"><span class="food-tag">A house favourite</span></div>
+                        <div class="menu-card-body"><div class="menu-card-heading"><h3>Ghanaian Jollof</h3><span class="price">GH₵35</span></div><p>Smoky, savoury rice cooked in a rich tomato and pepper sauce.</p><div class="menu-card-bottom"><span class="dish-category">RICE · GHANAIAN</span><button class="add-button" type="button" data-add aria-label="Add Ghanaian Jollof to your order">Add to order <span aria-hidden="true">+</span></button></div></div>
+                    </article>
+                    <article class="menu-card" data-name="Banku" data-category="local" data-price="30">
+                        <div class="menu-card-photo"><img src="foodimg/banku.jpg" alt="Traditional Ghanaian banku" loading="lazy"></div>
+                        <div class="menu-card-body"><div class="menu-card-heading"><h3>Banku</h3><span class="price">GH₵30</span></div><p>A comforting Ghanaian staple, prepared fresh and ready for your favourite pairing.</p><div class="menu-card-bottom"><span class="dish-category">LOCAL FAVOURITE</span><button class="add-button" type="button" data-add aria-label="Add Banku to your order">Add to order <span aria-hidden="true">+</span></button></div></div>
+                    </article>
+                    <article class="menu-card" data-name="Fried Rice" data-category="rice" data-price="40">
+                        <div class="menu-card-photo"><img src="foodimg/fried-rice.jpg" alt="Fried rice with colourful vegetables" loading="lazy"></div>
+                        <div class="menu-card-body"><div class="menu-card-heading"><h3>Fried Rice</h3><span class="price">GH₵40</span></div><p>Fragrant fried rice with crisp vegetables and a medley of tasty sides.</p><div class="menu-card-bottom"><span class="dish-category">RICE · FAVOURITE</span><button class="add-button" type="button" data-add aria-label="Add Fried Rice to your order">Add to order <span aria-hidden="true">+</span></button></div></div>
+                    </article>
+                    <article class="menu-card" data-name="Grilled Fish" data-category="grill" data-price="45">
+                        <div class="menu-card-photo"><img src="foodimg/grilled fish.jpg" alt="Freshly grilled fish" loading="lazy"></div>
+                        <div class="menu-card-body"><div class="menu-card-heading"><h3>Grilled Fish</h3><span class="price">GH₵45</span></div><p>Flame-grilled fish, beautifully seasoned for a tender, flavourful bite.</p><div class="menu-card-bottom"><span class="dish-category">FROM THE GRILL</span><button class="add-button" type="button" data-add aria-label="Add Grilled Fish to your order">Add to order <span aria-hidden="true">+</span></button></div></div>
+                    </article>
+                </div>
+                <p class="empty-menu" id="emptyMenu" hidden>No dishes match that search. Try another name or category.</p>
+            </div>
+        </section>
+        <section class="menu-note"><div class="page-width menu-note-inner"><span class="note-star" aria-hidden="true">✳</span><p>Have an allergy, a question, or planning a special meal?<br><a href="https://wa.me/233547668196?text=Hello%20Delicious%20Bites%2C%20I%20have%20a%20question%20about%20the%20menu." target="_blank" rel="noopener noreferrer">Talk to us on WhatsApp <span aria-hidden="true">↗</span></a></p></div></section>
+    </main>
 
-        <div class="food-card">
-            <img src="foodimg/jollof.jpg" alt="Jollof rice">
-            <h3>Jollof Rice</h3>
-            <p>Enjoy a delicious, flavourful rice dish.</p>
-            <strong>GH₵35</strong>
-            <a class="order-button"
-                href="https://wa.me/233547668196?text=Hello%2C%20I%20want%20to%20order%20Jollof%20Rice" target="_blank"
-                rel="noopener">
-                Order Now </a>
-        </div>
-        <div class="food-card">
-            <img src="foodimg/banku.jpg" alt="BANKU img">
-            <h3>Banku</h3>
-            <p>Enjoy a delicious, flavourful Banku dish.</p>
-            <strong>GH₵30</strong>
-
-            <a class="order-button" href="https://wa.me/233547668196?text=Hello%2C%20I%20want%20to%20order%20Banku%20"
-                target="_blank" rel="noopener">
-                Order Now
-            </a>
-        </div>
-
-        <div class="food-card">
-            <img src="foodimg/fried-rice.jpg" alt="Fried rice">
-            <h3>Fried Rice</h3>
-            <p>Delicious fried rice served with tasty sides.</p>
-            <strong>GH₵40</strong>
-            <a class="order-button" href="https://wa.me/233547668196?text=Hello%2C%20I%20want%20to%20order%20Fried rice%20"
-                target="_blank" rel="noopener">
-                Order Now
-            </a>
-
-
-
-        </div>
-
-        <div class="food-card">
-            <img src="foodimg/grilled fish.jpg" alt="Grilled fish">
-            <h3>Grilled Fish</h3>
-            <p>Enjoy a tasty fish meal.</p>
-            <strong>GH₵45</strong>
-
-            <a class="order-button" href="https://wa.me/233547668196?text=Hello%2C%20I%20want%20to%20order%20Grilled%20Fish%20"
-                target="_blank" rel="noopener">
-                Order Now
-            </a>
-
-        </div>
-
-    </div>
-
-    <a class="back-link" href="index.html">← Back to Home</a>
-
-    </a>
-
-
+    <aside class="cart-panel" id="cartPanel" aria-label="Your order" hidden>
+        <div class="cart-header"><div><p class="eyebrow"><span></span> Your order</p><h2>Good choice.</h2></div><button class="cart-close" type="button" id="closeCart" aria-label="Close order panel">×</button></div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-empty" id="cartEmpty"><span aria-hidden="true">✳</span><p>Your order is waiting to happen.</p><span>Add a dish to get started.</span></div>
+        <form class="cart-footer" id="checkoutForm" hidden>
+            <div class="cart-total"><span>Estimated total</span><strong id="cartTotal">GH₵0</strong></div>
+            <label class="checkout-label">Your name<input name="name" type="text" autocomplete="name" maxlength="80" required></label>
+            <label class="checkout-label">Phone number<input name="phone" type="tel" autocomplete="tel" maxlength="30" required></label>
+            <label class="checkout-label">Collection or delivery<select name="fulfillment" required><option value="">Choose one</option><option value="Collection">Collection</option><option value="Delivery">Delivery</option></select></label>
+            <label class="checkout-label">Notes (optional)<textarea name="notes" rows="2" maxlength="300" placeholder="Dietary notes or delivery address"></textarea></label>
+            <p>We’ll confirm availability, address and payment details on WhatsApp.</p>
+            <button class="button button-green checkout-button" id="checkoutButton" type="submit">Send order on WhatsApp <span aria-hidden="true">↗</span></button>
+            <div class="form-result" id="checkoutResult" role="status" hidden></div>
+        </form>
+    </aside>
+    <div class="cart-scrim" id="cartScrim" hidden></div>
+    <button class="cart-fab" id="cartButton" type="button" aria-controls="cartPanel" aria-expanded="false"><span aria-hidden="true">＋</span> Your order <span class="cart-count" id="cartCount">0</span></button>
+    <footer class="site-footer"><div class="page-width footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Delicious <em>Bites</em></span></a><p>Ghanaian flavour, made memorable.</p><span>© <span id="year"></span> Delicious Bites</span></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="backend-config.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>

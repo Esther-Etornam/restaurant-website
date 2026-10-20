@@ -1,102 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Delicious Bites</title>
-
+    <meta name="description" content="Discover the vibrant flavours of Ghana at Delicious Bites. Order your favourites, book a table or enquire about catering.">
+    <meta name="theme-color" content="#18352d">
+    <title>Delicious Bites | Ghanaian flavour, made memorable</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<nav>
-    <h2>Delicious Bites</h2>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <nav class="site-nav page-width" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Delicious Bites home"><span class="brand-mark" aria-hidden="true">D</span><span>Delicious <em>Bites</em></span></a>
+            <button class="menu-button" id="menuButton" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="menu.html">Our menu</a></li>
+                <li><a href="#story">Our story</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a class="nav-cta" href="#reserve">Book a table <span aria-hidden="true">↗</span></a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <button class="menu-button" id="menuButton"
-        aria-label="Toggle navigation"
-        aria-expanded="false">
-        ☰
-    </button>
-
-    <ul id="navLinks">
-        <li><a href="#home">Home</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-    
-
-
-    <section class="hero" id="home">
-
-        <h1>Welcome to Delicious Bites</h1>
-
-        <p>
-            Fresh food. Great taste. Happy moments.
-        </p>
-        
-        
-        <a href="#menu">View Our Menu</a>
-
-    </section>
-
-
-    <section class="menu" id="menu">
-
-        <h2>Our Menu</h2>
-
-        <div class="food-container">
-
-            <div class="food-card">
-                <h3>Jollof Rice</h3>
-                <p>Delicious Ghanaian-style jollof rice.</p>
-                <strong>GH₵35</strong>
+    <main id="main">
+        <section class="hero">
+            <div class="hero-image" role="img" aria-label="A serving of colourful Ghanaian jollof rice"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-content page-width">
+                <p class="eyebrow light-eyebrow"><span></span> A little taste of Ghana</p>
+                <h1>Good food.<br><em>Good people.</em><br>Great memories.</h1>
+                <p class="hero-copy">Come hungry, leave happy. We bring Ghanaian favourites and warm hospitality to every table.</p>
+                <div class="hero-actions">
+                    <a class="button button-gold" href="menu.html">Explore the menu <span aria-hidden="true">↗</span></a>
+                    <a class="text-link light-link" href="#story">Get to know us <span aria-hidden="true">↓</span></a>
+                </div>
+                <div class="hero-note"><span class="star">✳</span><span><strong>Made with heart</strong><br>Rooted in Ghanaian flavour</span></div>
             </div>
+            <div class="hero-stamp" aria-hidden="true"><span>FRESH<br>FROM OUR<br>KITCHEN</span><b>✳</b></div>
+        </section>
 
-            <div class="food-card">
-                <h3>Fried Rice</h3>
-                <p>Fresh fried rice served with chicken.</p>
-                <strong>GH₵40</strong>
+        <section class="welcome-section section-pad" id="story">
+            <div class="page-width welcome-grid">
+                <div class="welcome-image-wrap">
+                    <img class="welcome-image" src="foodimg/banku.jpg" alt="Traditional banku, freshly prepared">
+                    <div class="image-caption"><span>Made fresh, served with love</span><span aria-hidden="true">✳</span></div>
+                </div>
+                <div class="welcome-copy">
+                    <p class="eyebrow"><span></span> Welcome to our table</p>
+                    <h2>Food that feels<br><em>like coming home.</em></h2>
+                    <p>At Delicious Bites, every plate tells a story. We celebrate the bold spices, generous spirit and familiar flavours of Ghanaian cooking—with a fresh touch and a place for everyone.</p>
+                    <p>Whether it’s a quick lunch or a long-overdue catch-up, there’s always room at our table.</p>
+                    <a class="text-link" href="#services">A little more about us <span aria-hidden="true">→</span></a>
+                    <div class="welcome-signoff"><span class="signoff-mark">D</span><span>Good things are<br><em>always cooking.</em></span></div>
+                </div>
             </div>
+        </section>
 
-            <div class="food-card">
-                <h3>Grilled Chicken</h3>
-                <p>Juicy grilled chicken with tasty sides.</p>
-                <strong>GH₵45</strong>
+        <section class="popular-section section-pad">
+            <div class="page-width">
+                <div class="section-heading">
+                    <div><p class="eyebrow"><span></span> A few favourites</p><h2>Made to be <em>shared.</em></h2></div>
+                    <a class="text-link desktop-link" href="menu.html">See the full menu <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="featured-grid">
+                    <article class="featured-card">
+                        <a class="featured-photo" href="menu.html" aria-label="Explore Jollof Rice on our menu"><img src="foodimg/jollof.jpg" alt="A generous serving of Ghanaian jollof rice" loading="lazy"><span class="food-tag">A house favourite</span></a>
+                        <div class="featured-details"><div><h3>Ghanaian Jollof</h3><p>Smoky, savoury and full of soul.</p></div><span class="price">GH₵35</span></div>
+                    </article>
+                    <article class="featured-card">
+                        <a class="featured-photo" href="menu.html" aria-label="Explore Banku on our menu"><img src="foodimg/banku.jpg" alt="Traditional Ghanaian banku" loading="lazy"></a>
+                        <div class="featured-details"><div><h3>Banku</h3><p>A comforting classic, made fresh.</p></div><span class="price">GH₵30</span></div>
+                    </article>
+                    <article class="featured-card">
+                        <a class="featured-photo" href="menu.html" aria-label="Explore Grilled Fish on our menu"><img src="foodimg/grilled fish.jpg" alt="Freshly grilled fish" loading="lazy"></a>
+                        <div class="featured-details"><div><h3>Grilled Fish</h3><p>Flame-kissed and deliciously tender.</p></div><span class="price">GH₵45</span></div>
+                    </article>
+                </div>
+                <a class="text-link mobile-link" href="menu.html">See the full menu <span aria-hidden="true">→</span></a>
             </div>
+        </section>
 
-        </div>
+        <section class="quote-section">
+            <div class="page-width quote-inner"><span class="quote-mark" aria-hidden="true">“</span><blockquote>There’s nothing quite like gathering around a good meal.</blockquote><p>Pull up a chair. We saved you a spot.</p></div>
+        </section>
 
-    </section>
+        <section class="services-section section-pad" id="services">
+            <div class="page-width">
+                <div class="section-heading services-heading"><div><p class="eyebrow"><span></span> More ways to gather</p><h2>Good food for <em>every occasion.</em></h2></div><p>From an easy weeknight meal to a room full of your favourite people, we’d love to be part of it.</p></div>
+                <div class="services-grid">
+                    <article class="service-card"><span class="service-icon" aria-hidden="true">01</span><h3>Dine with us</h3><p>Settle in, take your time and enjoy a proper meal with warm, friendly service.</p><a class="text-link" href="#reserve">Book a table <span aria-hidden="true">→</span></a></article>
+                    <article class="service-card"><span class="service-icon" aria-hidden="true">02</span><h3>Take it home</h3><p>Your favourites, freshly prepared and ready to enjoy wherever you are.</p><a class="text-link" href="menu.html">Order takeaway <span aria-hidden="true">→</span></a></article>
+                    <article class="service-card"><span class="service-icon" aria-hidden="true">03</span><h3>Gather & celebrate</h3><p>Bring everyone together with thoughtful catering for your special occasion.</p><a class="text-link" href="#contact">Ask about catering <span aria-hidden="true">→</span></a></article>
+                </div>
+            </div>
+        </section>
 
+        <section class="reserve-section section-pad" id="reserve">
+            <div class="page-width reserve-grid">
+                <div class="reserve-intro"><p class="eyebrow light-eyebrow"><span></span> We’ll put the kettle on</p><h2>Save a seat<br><em>at our table.</em></h2><p>Planning a visit? Send us a reservation request and we’ll confirm the details with you on WhatsApp.</p><div class="reserve-contact"><span>Prefer to talk?</span><a href="tel:+233547668196">+233 54 766 8196</a></div></div>
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-heading"><h3>Make a reservation</h3><p>Share a few details to get started.</p></div>
+                    <div class="form-row"><label>Your name<input name="name" type="text" autocomplete="name" placeholder="e.g. Ama Mensah" required maxlength="80"></label><label>Phone number<input name="phone" type="tel" autocomplete="tel" placeholder="+233 ..." required maxlength="30"></label></div>
+                    <div class="form-row"><label>Date<input name="date" id="bookingDate" type="date" required></label><label>Time<select name="time" required><option value="">Choose a time</option><option>12:00 pm</option><option>1:00 pm</option><option>2:00 pm</option><option>3:00 pm</option><option>5:00 pm</option><option>6:00 pm</option><option>7:00 pm</option><option>8:00 pm</option></select></label></div>
+                    <label>Number of guests<select name="guests" required><option value="">Choose a party size</option><option>1 guest</option><option>2 guests</option><option>3 guests</option><option>4 guests</option><option>5 guests</option><option>6 guests</option><option>7+ guests</option></select></label>
+                    <button class="button button-gold form-submit" type="submit">Prepare reservation request <span aria-hidden="true">↗</span></button>
+                    <p class="form-note">Your request isn’t confirmed until we reply.</p>
+                    <div class="form-result" id="bookingResult" role="status" hidden></div>
+                </form>
+            </div>
+        </section>
 
-    <section class="about" id="about">
+        <section class="contact-strip" id="contact"><div class="page-width contact-inner"><div><p class="eyebrow"><span></span> Come say hello</p><h2>Something delicious <em>is waiting.</em></h2></div><div class="contact-details"><a href="tel:+233547668196">+233 54 766 8196</a><a href="mailto:hello@deliciousbites.com">hello@deliciousbites.com</a><a href="https://wa.me/233547668196?text=Hello%20Delicious%20Bites%2C%20I%27d%20like%20to%20ask%20about%20catering." target="_blank" rel="noopener noreferrer">Catering enquiries <span aria-hidden="true">↗</span></a></div></div></section>
+    </main>
 
-        <h2>About Us</h2>
-
-        <p>
-            Delicious Bites is a fictional restaurant created
-            as a web development portfolio project.
-        </p>
-
-    </section>
-
-
-    <section class="contact" id="contact">
-
-        <h2>Contact Us</h2>
-
-        <p>Call us: 0547668196</p>
-
-        <p>Email: hello@deliciousbites.com</p>
-
-    </section>
-
-<script src="script.js"></script>
+    <footer class="site-footer"><div class="page-width footer-inner"><a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">D</span><span>Delicious <em>Bites</em></span></a><p>Ghanaian flavour, made memorable.</p><span>© <span id="year"></span> Delicious Bites</span></div></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="backend-config.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
